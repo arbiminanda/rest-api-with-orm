@@ -6,7 +6,7 @@ const logRequest = (req, res, next) => {
   const clientIP =
     req.headers["x-forwarded-for"] || req.connection.remoteAddress;
   const date = new Date();
-  const timestamp = convertTimestamp(date.toISOString(), "Asia/Jakarta");
+  const timestamp = convertTimestamp(date, "Asia/Jakarta");
   const startTime = date;
 
   const onBoardPath = path === "/user/login" || path === "/user/register";
